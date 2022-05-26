@@ -1,0 +1,22 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'index.css' %}">
+    <title>Document</title>
+</head>
+<body>
+    {% for users in sa %}
+        <div class="user">
+            <h1>id {{users.id}} </h1>
+            <h1>Hello {{users.name}} !!!</h1>
+            <h3>email: {{users.email}}</h3>
+            <h4>contact: {{users.phno}}</h4>
+        </div>
+    {% endfor %}
+
+</body>
+</html>
